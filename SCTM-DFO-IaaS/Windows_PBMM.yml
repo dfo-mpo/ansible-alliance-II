@@ -122,3 +122,21 @@
       data: 00000001
       type: dword
       state: present
+      
+  # Vulnerability
+  - name: CVE-2017-8529 Microsoft Browser Information Disclosure Vulnerability
+    win_regedit:
+      path: HKLM:\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ENABLE_PRINT_INFO_DISCLOSURE_FIX
+      name: FEATURE_ENABLE_PRINT_INFO_DISCLOSURE_FIX
+      data: 00000001
+      type: dword
+      state: present
+      
+  # Vulnerability
+  - name: CVE-2017-8529 Microsoft Browser Information Disclosure Vulnerability 64bit
+    win_regedit:
+      path: HKLM:\SOFTWARE\WOW6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ENABLE_PRINT_INFO_DISCLOSURE_FIX
+      name: FEATURE_ENABLE_PRINT_INFO_DISCLOSURE_FIX
+      data: 00000001
+      type: dword
+      state: present
